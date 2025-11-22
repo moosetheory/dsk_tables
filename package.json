@@ -1,8 +1,10 @@
 {
-  "name": "flawless-electronforge-vite-vue3-ts",
-  "productName": "flawless-electronforge-vite-vue3-ts",
+  "name": "dsk_tables",
+  "productName": "dsk_tables",
   "version": "0.1.0",
-  "description": "My Electron application description",
+  "description": "Filter Thing",
+  "author": "adhdgirl",
+  "email": "annika@adhdgirl.dev",
   "main": ".vite/build/main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -12,8 +14,7 @@
     "lint": "eslint --ext .ts,.tsx ."
   },
   "keywords": [],
-  "author": "Kable",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "devDependencies": {
     "@electron-forge/cli": "^7.8.1",
     "@electron-forge/maker-deb": "^7.8.1",
@@ -31,6 +32,7 @@
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/eslint-config-typescript": "^14.6.0",
     "electron": "37.2.4",
+    "electron-builder": "^26.0.12",
     "eslint": "^9.32.0",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-vue": "^10.3.0",
@@ -46,5 +48,14 @@
     "primevue": "^4.4.1",
     "vue": "^3.5.18",
     "vue-router": "^4.5.1"
+  },
+  "build": {
+    "appId": "dev.adhdgirl.dsk-tables",
+    "win": {
+      "target": ["portable"]
+    },
+    "linux": {
+      "target": ["deb"]
+    }
   }
 }
