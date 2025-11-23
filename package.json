@@ -58,7 +58,7 @@
         { "target": "7z", "arch": "x64" }
       ]
     },
-    "macos": {
+    "mac": {
       "category": "public.app-category.productivity",
       "target": [
         { "target": "dmg", "arch": [ "arm64", "universal" ] },
