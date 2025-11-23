@@ -18,6 +18,8 @@ const createWindow = () => {
     show: false,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
+      webSecurity: false,
+      allowRunningInsecureContent: true
     },
   });
 

@@ -6,4 +6,7 @@ export default defineConfig({
   plugins: [
     pluginHotRestart('restart')
   ],
+  server: {
+    host: '0.0.0.0'
+  }
 });
