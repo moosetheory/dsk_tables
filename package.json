@@ -51,11 +51,19 @@
   },
   "build": {
     "appId": "dev.adhdgirl.dsk-tables",
+    "artifactName": "${productName}-${os}-${arch}.${ext}",
     "win": {
-      "target": ["portable"]
+      "target": [
+        { "target": "portable", "arch": "x64" },
+        { "target": "7z", "arch": "x64" }
+      ]
     },
-    "linux": {
-      "target": ["deb"]
+    "macos": {
+      "category": "public.app-category.productivity",
+      "target": [
+        { "target": "dmg", "arch": [ "arm64", "universal" ] },
+        { "target": "zip", "arch": [ "arm64", "universal" ] }
+      ]
     }
   }
 }
