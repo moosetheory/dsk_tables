@@ -4,26 +4,26 @@ on:
   push:
 
 jobs:
-  mac-release:
-    runs-on: macos-latest
-    steps:
-      - name: Clone project
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Install bun
-        uses: oven-sh/setup-bun@v2
-      - name: Build Mac arm64 release
-        shell: bash
-        run: |
-          bunx electron-builder --macos
-      - name: Publish Artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          if-no-files-found: error
-          path: |
-            dist/dsk_tables-mac-arm64.dmg
-            dist/dsk_tables-mac-arm64.zip
+  # mac-release:
+  #   runs-on: macos-latest
+  #   steps:
+  #     - name: Clone project
+  #       uses: actions/checkout@v4
+  #       with:
+  #         fetch-depth: 0
+  #     - name: Install bun
+  #       uses: oven-sh/setup-bun@v2
+  #     - name: Build Mac arm64 release
+  #       shell: bash
+  #       run: |
+  #         bunx electron-builder --macos
+  #     - name: Publish Artifacts
+  #       uses: actions/upload-artifact@v4
+  #       with:
+  #         if-no-files-found: error
+  #         path: |
+  #           dist/dsk_tables-mac-arm64.dmg
+  #           dist/dsk_tables-mac-arm64.zip
   win-release:
     runs-on: windows-latest
     steps:
