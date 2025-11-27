@@ -11,3 +11,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - v0.1.0 Initial Release
 - v0.1.1 Fixes applied to workflows
+- v0.1.2 Actions fixes
